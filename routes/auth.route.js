@@ -12,13 +12,13 @@ module.exports = (app) => {
   router.post("/login", user.login);
 
   // Google OAuth login
-  router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
+  router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
 
   // Callback URL setelah Google login
   router.get(
     "/google/callback",
     passport.authenticate("google", {
-      failureRedirect: "/login",
+      failureRedirect: "/",
       session: false,
     }),
     (req, res) => {

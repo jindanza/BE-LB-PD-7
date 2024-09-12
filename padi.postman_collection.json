@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "705d709d-2b53-4e6e-9306-3195abba4531",
+		"name": "padi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15087057"
+	},
+	"item": [
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_name",
+							"value": "kitchen",
+							"type": "text"
+						},
+						{
+							"key": "product_name",
+							"value": "cangkir",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "dapur",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "sold",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "jakarta",
+							"type": "text"
+						},
+						{
+							"key": "pre_order",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "pdn",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "pkp",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "tkdn",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "promo",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/cangkir.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "cangkir",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
