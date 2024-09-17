@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const passport = require("./config/passport"); // Import passport configuration
+const passport = require("./config/passport");
 const session = require("express-session");
 
 const app = express();
@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
 });
 
 require("./routes/product.route.js")(app);
-require("./routes/auth.route.js")(app); // Include the auth routes
+require("./routes/auth.route.js")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

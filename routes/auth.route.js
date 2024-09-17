@@ -1,4 +1,5 @@
 const passport = require("passport");
+const jwt = require('jsonwebtoken');
 
 module.exports = (app) => {
   const user = require("../controllers/auth.controller");

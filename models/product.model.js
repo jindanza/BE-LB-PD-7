@@ -18,6 +18,9 @@ module.exports = (sequelize, Sequelize) => {
         sold: {
             type: Sequelize.INTEGER
         },
+        rating: {
+            type: Sequelize.INTEGER
+        },
         location: {
             type: Sequelize.STRING
         },
