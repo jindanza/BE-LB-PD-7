@@ -23,21 +23,16 @@ module.exports = (app) => {
       session: false,
     }),
     (req, res) => {
+      const payload = { id: req.user.id, username: req.user.username };
       // Generate JWT for Google users
-      const token = jwt.sign(
-        {
-          id: req.user.id,
-          username: req.user.username,
-        },
-        "supersecretkey",
-        {
-          expiresIn: 86400,
-        }
-      );
+      const token = jwt.sign(payload, "supersecretkey", {expiresIn: '1h'});
       res.status(200).send({
         message: "Success Login with Google!",
         code: 200,
-        data: token,
+        data: {
+          token: token,
+          username: req.user.username,
+        },
       });
     }
   );
