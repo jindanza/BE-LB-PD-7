@@ -88,7 +88,10 @@ exports.login = (req, res) => {
         res.status(200).send({
           message: "Success Login!",
           code: 200,
-          data: token,
+          data: {
+            token: token,
+            username: user.username
+          },
         });
       })
       .catch((err) => {

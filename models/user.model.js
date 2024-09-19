@@ -4,6 +4,7 @@ module.exports = (sequelize, Sequelize) => {
     {
       username: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
@@ -12,6 +13,13 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING,
         allowNull: true,
       },
+      phoneNumber: {
+        type: Sequelize.STRING,
+      },
+      referralCode: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      }
     },
     {
       timestamp: true,
