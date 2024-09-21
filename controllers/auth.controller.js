@@ -18,6 +18,8 @@ exports.create = (req, res) => {
   const user = {
     username: req.body.username,
     password: bcrypt.hashSync(req.body.password, 10),
+    phoneNumber: req.body.phoneNumber,
+    referralCode: req.body.referralCode,
   };
 
   User.create(user)
