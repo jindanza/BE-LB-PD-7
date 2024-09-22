@@ -3,6 +3,8 @@ const dbConfig = require("../config/db.config.js");
 require("dotenv").config();
 
 const Sequelize = require("sequelize");
+console.log("Database URL: ", process.env.POSTGRES_URL);
+
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
   dialect: "postgres",
   protocol: "postgres",
@@ -19,6 +21,7 @@ const sequelize = new Sequelize(process.env.POSTGRES_URL, {
     },
   },
 });
+
 
 const db = {};
 
