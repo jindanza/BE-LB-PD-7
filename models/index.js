@@ -1,4 +1,6 @@
 const dbConfig = require("../config/db.config.js");
+const pg = require('pg');
+pg.defaults.ssl = true; 
 
 require("dotenv").config();
 
